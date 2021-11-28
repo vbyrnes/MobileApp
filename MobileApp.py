@@ -10,25 +10,22 @@ class MyGrid(GridLayout):
         super(MyGrid, self).__init__(**kwargs)
 
         self.inside = GridLayout()
-        self.cols = 2
-        self.add_widget(Label(text="First Name: "))
+        self.inside.cols = 2
+               
+        self.inside.add_widget(Label(text="First Name: "))
         self.firstname = TextInput(multiline=False)
-        self.add_widget(self.firstname)
-
-        super(MyGrid, self).__init__(**kwargs)
-        self.cols = 2
-        self.add_widget(Label(text="Last Name: "))
+        self.inside.add_widget(self.firstname)
+               
+        self.inside.add_widget(Label(text="Last Name: "))
         self.lastname = TextInput(multiline=False)
-        self.add_widget(self.lastname)
-
-        super(MyGrid, self).__init__(**kwargs)
-        self.cols = 2
-        self.add_widget(Label(text="Email: "))
+        self.inside.add_widget(self.lastname)
+             
+        self.inside.add_widget(Label(text="Email: "))
         self.email = TextInput(multiline=False)
-        self.add_widget(self.email)
+        self.inside.add_widget(self.email)
 
         self.submit = Button(text="submit", font_size=40)
-        self.add_widget(self.submit)
+        self.inside.add_widget(self.submit)
 
 class MyApp(App):
     def build(self):
