@@ -36,7 +36,7 @@ class MyGrid(GridLayout):
         first = self.firstname.text
         last = self.lastname.text
         email=self.email.text
-        Print("First Name: ", first, "Last Name: ", last, "Email: ", email)
+        print("First Name: ", first, "Last Name: ", last, "Email: ", email)
 
 class MyApp(App):
     def build(self):
