@@ -8,6 +8,7 @@ from kivy.uix.button import Button
 class MyGrid(GridLayout):
     def __init__(self, **kwargs):
         super(MyGrid, self).__init__(**kwargs)
+        self.cols=1
 
         self.inside = GridLayout()
         self.inside.cols = 2
@@ -24,8 +25,10 @@ class MyGrid(GridLayout):
         self.email = TextInput(multiline=False)
         self.inside.add_widget(self.email)
 
+        self.add_widget(self.inside)
+
         self.submit = Button(text="submit", font_size=40)
-        self.inside.add_widget(self.submit)
+        self.add_widget(self.submit)
 
 class MyApp(App):
     def build(self):
